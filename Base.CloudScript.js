@@ -260,6 +260,9 @@ handlers.RoomCreated = function (args) {
 // Triggered automatically when a player joins a Photon room
 handlers.RoomJoined = function (args) {
     log.debug("Room Joined - Game: " + args.GameId + " PlayFabId: " + args.UserId);
+
+	var message = "Room Joined - Game: " + " PlayFabId: " + args.UserId + "!";
+    return { messageValue: message };
 };
 
 // Triggered automatically when a player leaves a Photon room
