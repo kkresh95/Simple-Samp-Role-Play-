@@ -58,6 +58,12 @@ handlers.helloWorld = function (args, context) {
     return { messageValue: message };
 };
 
+
+function CheckLives(args liver)
+{
+
+}
+
 // This is a simple example of making a PlayFab server API call
 handlers.makeAPICall = function (args, context) {
     var request = {
