@@ -17,7 +17,7 @@
 // passing in the function name and arguments in the request and receiving the 
 // function return result in the response.
 // (https://api.playfab.com/Documentation/Client/method/ExecuteCloudScript)
-// 
+
 // 2) You create PlayStream event actions that call them when a particular 
 // event occurs, passing in the event and associated player profile data.
 // (https://api.playfab.com/playstream/docs)
@@ -29,7 +29,7 @@
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
+asdasdadad asdasd asd a
 // This is a Cloud Script function. "args" is set to the value of the "FunctionParameter" 
 // parameter of the ExecuteCloudScript API.
 // (https://api.playfab.com/Documentation/Client/method/ExecuteCloudScript)
