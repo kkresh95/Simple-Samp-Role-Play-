@@ -262,7 +262,7 @@ handlers.RoomJoined = function (args) {
     log.debug("Room Joined - Game: " + args.GameId + " PlayFabId: " + args.UserId);
 
 	var message = "Room Joined - Game: " + " PlayFabId: " + args.UserId + "!";
-    return { messageValue: message };
+    SetUserData();
 };
 
 // Triggered automatically when a player leaves a Photon room
@@ -298,3 +298,25 @@ handlers.RoomEventRaised = function (args) {
             break;
     }
 };
+
+
+function SetUserData() 
+{
+    try 
+	{
+        var result = server.UpdateUserData( 
+		{
+            PlayFabId : currentPlayerId,
+            Data : 
+			{
+                Ancestor : "Arthur",
+                Successor : "Fred"
+            }
+        });
+        log.debug("Successfully updated user data");
+    } catch(error) {
+        log.error("Got error setting user data Ancestor to Arthur");
+        log.error(JSON.stringify(error));
+    }
+}
+
